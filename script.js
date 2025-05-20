@@ -475,27 +475,127 @@ console.log(factorial);
 
 // ---- MAY 15
 //--------------  FUNCTIONS
-// is a reeuseable block of code that can be evolved or called in JS
-// How to create a function
-// - Function  is to use the function keyword
-function runAlert(){
-    alert("Good Morning, Nigeria!")
-}
-runAlert()
+// is a reuseable block of code designed to perform a specific task
+// 3 ways to create a function
+// function decleration
+// function expression
+// arrow funtion
+
+
+// - Function decleration
+// function runAlert(){
+//     alert("Good Morning, Nigeria!")
+// }
+// runAlert()  //involk
+
 // - Function Expression - 
-const myFunc = function(){
-    alert("God bless Nigeria!")
-}
-myFunc()
+// const myFunc = function(){ //annonymous function
+//     alert("God bless Nigeria!")
+// }
+// myFunc()
 // - Arrow Function - is a derivative of function exp
-const myArrow = () =>{
-    alert("God bless Nuga")
-}
-myArrow()
+// const myArrow = () =>{
+//     alert("God bless Nuga")
+// }
+// myArrow()
 
 
-// Function Parameters
-function texxxt(a){
-    console.log(a)
+
+//--- argument and parameter
+//--argument is the actual value
+// Function Parameters - is a placeholder variable 
+function texxxt(a){// name of the parameter
+    console.log("hello " + a)
 }
-texxxt(23)
+texxxt('Oreoluwa') //oreoluwa is an argument
+
+
+// default parameter
+function person(name = "jumoke ",age){
+    console.log("hello " + name+ " your age is " + age)
+}
+person('Oreoluwa', 20) //oreoluwa is an argument
+person('ibukun', 40) 
+
+const women = (age)=>{
+    console.log(age)
+}
+women(90)
+
+
+//  HIGHER ORDER FUNCTION & CALLBACK FUNCTION
+
+//--higher order funtion is the func that make use of other function
+//-callback function --- which is been used by an higher order function
+const play = (func) =>{
+    func("This is magic")// arg
+}
+function lab(str){
+        alert(str)
+    }
+play(lab) //callback
+
+
+// -- RETURN STATEMENT
+function test(a,b){
+    return a * b
+}
+console.log(test(40,50))
+const answer = test(400,50)
+console.log(answer)
+
+//hoist
+//refers to ability useable before dey are initialized
+host()
+function host(){
+    console.log('hoist')
+}
+
+
+// implicit
+
+//-------    asssssss
+
+// # 21. 
+//Function to print "Hello, World!"
+// function greet(){
+//     alert("Hello, World!")
+// }
+// greet()
+//# 22. Function to add two numbers 
+function add(a, b){
+    return a + b
+}
+const answerr = add(10,30)
+console.log(answerr)
+// # 23. Function to return the square of a number 
+function square(num){
+    return num * num
+}
+
+//24
+function countVowels(str){
+    let numOfVowels = 0
+    str = str.split("");
+    console.log(str)
+    str.map((letter) => {
+        if (
+            letter == "a" ||
+            letter == "e" ||
+            letter == "i" ||
+            letter == "o" ||
+            letter == "u" 
+        ) {
+            numOfVowels = numOfVowels + 1;
+        }
+    });
+    console.log(numOfVowels)
+}
+countVowels('hello world')
+
+//25 
+
+
+
+
+//------ MAY 20
