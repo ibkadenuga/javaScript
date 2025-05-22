@@ -1,3 +1,11 @@
+// how to add and push to git
+// git add .
+// git commit -m "test"
+// git push
+
+
+//prettier
+  
   //STRING
 //EXAMPLE OF STRING
 //string values "567"; "@%$#"; "Samu"
@@ -578,7 +586,7 @@ function countVowels(str){
     let numOfVowels = 0
     str = str.split("");
     console.log(str)
-    str.map((letter) => {
+    str.map((letter) => { // map allows us to go tru a string 
         if (
             letter == "a" ||
             letter == "e" ||
@@ -598,4 +606,58 @@ countVowels('hello world')
 
 
 
-//------ MAY 20
+//----  MAY 222  ARRAY --  is a collection of data stored in an index manner
+let myarr = ["apple", "banana", 1, 2, 3, 4, true, false, null, undefined, NaN, Infinity, -Infinity, [1,3,4],];
+console.log(myarr);
+console.log(myarr[6]);
+console.log(myarr[8]);
+// how to access or change
+// chnge data 1 
+myarr[1] = 'grape'
+console.log(myarr)
+//how to delete 5
+delete myarr[5]
+console.log(myarr)
+
+
+// ARRAY METHHOD are funtions that allows us to perform operations on ouur array
+// Array length - let us to get the leght of array
+let lenght = myarr.length
+console.log(myarr.length)
+//Array toString
+let arrToStr = myarr.toString()
+console.log(arrToStr)
+// at method
+let special = myarr.at[9]
+console.log(special)
+// JOIN methed
+let joined = myarr.join(':next,\n') // /n means new line character
+console.log(joined)
+//pop and push method-- pop allows us to remove while push allows us to add
+myarr.pop()
+console.log(myarr)
+myarr.push('get out')
+console.log(myarr)
+
+//how to change the first index
+myarr.shift()
+console.log(myarr)
+myarr.unshift('new item')
+console.log(myarr)
+
+// array concatenations - it means join two array or two strings together
+let newArr = myarr.concat(['we', 'will', 'we', 'will', 'you'])
+console.log(newArr)
+
+//flat method -it flatten our nexted array
+let arr = [[1,2,3], [4,5,6]]
+console.log(arr.flat())
+
+//Splice and Slice - method - can be used to add new method to array while slice add
+let arrr = [1,2,3,4,5,6,7,8,9,10]
+arrr.splice(3,3,800)//it takes multiple items add ammd remove
+console.log(arrr)
+//slice
+let arrrr = [1,2,3,4,5,6,7,8,9,10]
+let sliced = arrrr.slice(0,3)
+console.log(arrr)
