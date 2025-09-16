@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CART</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/3a396f5508.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="p-5 px-5 flex flex-col h-full min-h-screen gap-3">
+    <header
+      class="flex justify-between shadow-xl sticky w-full top-0 p-3 px-4 z-99 bg-white">
+      <h1>Logo</h1>
+
+      <button class="bg-gray-500 relative text-yellow-600 w-7 h-7 text-[13px] cursor-pointer rounded-full">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cartCount flex justify-center items-center absolute right-0 top-0 h-4 w-4 bg-white rounded-full">
+            0
+        </span>
+      </button>
+    </header>
+
+    <main class="flex p-3 items-start">
+      <div
+        class="container relative flex-1 flex flex-wrap gap-3 justify-center z-10 flex-1 *:w-51 *:h-fit *:min-h-56"
+      ></div>
+
+      <div class="border w-110 min-h-40">
+        <h1 class="text-3xl font-semibold p-2">Your Cart</h1>
+        <div class="cart-list"></div>
+      </div>
+    </main>
+  </body>
+  <script src="appp.js"></script>
+</html>

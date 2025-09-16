@@ -58,6 +58,7 @@ let book = null
 //date
 //map
 //set
+//dom
 
 
 
@@ -112,7 +113,7 @@ console.log(20 !== "20")
 //  && (ampersand) - and  : is used to check if multiple operations are TRUE
 console.log(10 > 5 && 10 >20)
 
-//  || (pipe symbol) - or 
+//  || (pipe symbol) - or is used to check if one is true
 console.log(10 > 5 || 10 > 20)
 
 
@@ -265,7 +266,7 @@ console.log(50 / 5);
 
 //19
 let diffrence = 100 - 75
-console.log(100 - 75);
+console.log(diffrence);
 
 //20
 console.log(25 + "5"); "5 is a string"
@@ -283,7 +284,7 @@ console.log(25 + "5"); "5 is a string"
 // 2 -EXPLICIT TYPE CONVERSION
 
 // IMPLICIT TYPE OF CONVERSION - when  JS converts your data from one type to another while performing operations
-console.log(typeof (20 + "20"), 20 + "20")
+console.log(typeof (20 + "30"), 20 + "30")
 console.log(typeof (20 * "20"), 20 * "20")
 console.log(typeof (20 * "abc"), 20 * "abc")
 console.log(typeof (20 / "20"), 20 / "20")
@@ -291,13 +292,13 @@ console.log(typeof (20 - "20"), 20 - "20")
 
 
 
-//EXPLICIT TYPE CONVERSION  - se;f cpnversion
+//EXPLICIT TYPE CONVERSION  - self cpnversion
 // convert a number to string
 
 let text = 20;
 console.log(String(200))
 //from boolean to string
-console.log(String(true))
+console.log(String(true)) 
 
 //sting covert it to boolean
 console.log(Boolean("9"))
@@ -455,7 +456,12 @@ console.log(reversed);
 let strr = "programming is fun"
 let cnt = 0
 for(pp=0; pp < strr.length;pp++){
-    if(strr[pp] == 'a'|| strr[pp] == 'e'||strr[pp] == 'i'||strr[pp] == 'o'|| strr[pp] == 'u'){
+    if(strr[pp] == 'a'|| 
+        strr[pp] == 'e'||
+        strr[pp] == 'i'||
+        strr[pp] == 'o'|| 
+        strr[pp] == 'u')
+        {
         cnt++
     }
 }
@@ -535,13 +541,13 @@ women(90)
 
 //--higher order funtion is the func that make use of other function
 //-callback function --- which is been used by an higher order function
-const play = (func) =>{
-    func("This is magic")// arg
-}
-function lab(str){
-        alert(str)
-    }
-play(lab) //callback
+// const play = (func) =>{
+//     func("This is magic")// arg
+// }
+// function lab(str){
+//         alert(str)
+//     }
+// play(lab) //callback
 
 
 // -- RETURN STATEMENT
@@ -607,6 +613,7 @@ countVowels('hello world')
 
 
 //----  MAY 222  ARRAY --  is a collection of data stored in an index manner
+
 let myarr = ["apple", "banana", 1, 2, 3, 4, true, false, null, undefined, NaN, Infinity, -Infinity, [1,3,4],];
 console.log(myarr);
 console.log(myarr[6]);
@@ -661,3 +668,7 @@ console.log(arrr)
 let arrrr = [1,2,3,4,5,6,7,8,9,10]
 let sliced = arrrr.slice(0,3)
 console.log(arrr)
+
+
+
+///continue reading in nect javabook

@@ -1,0 +1,147 @@
+
+/* JUNE 8 */
+/* Reset default margin, padding, and box-sizing for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Set a default font for the entire document */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Style the body of the document */
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  gap: 40px;
+}
+
+/* Style the main heading */
+h1 {
+  font-size: 35px;
+  /* Create a gradient background for the text */
+  background: linear-gradient(to bottom left, red, green);
+  /* Clip the background to the text */
+  background-clip: text;
+  /* Make the text color transparent to show the gradient */
+  color: transparent;
+}
+
+/* Style the form */
+form {
+  border: solid 1px;
+  border-radius: 5px;
+  overflow: hidden;
+  /* Style the input field within the form */
+  input {
+    height: 40px;
+    width: 300px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 18px;
+  }
+  /* Style the button within the form */
+  button {
+    height: 40px;
+    width: 100px;
+    font-size: 18px;
+    border: none;
+    background-color: green;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+  }
+}
+
+/* Style the task container */
+.task-container {
+  width: fit-content;
+  min-width: 550px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  /* Style the individual task divs */
+  div {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(128, 128, 128, 0.281);
+  }
+
+  /* Style the checkbox */
+  .check {
+    appearance: none;
+    border: none;
+    position: relative;
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Style the custom checkbox indicator */
+  .check::after {
+    position: absolute;
+    display: block;
+    height: 20px;
+    width: 20px;
+    border: solid 1px;
+    border-radius: 50%;
+    cursor: pointer;
+    content: "";
+    top: 0;
+    left: 0;
+  }
+
+    /* Style the custom checkbox when it is checked */
+    .check:checked::after{
+        background-color: green;
+        border: 1px solid green;
+        content: '\2713';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 25px;
+    }
+
+  /* Style the text input field for the task */
+  .text {
+    flex: 1;
+    height: 40px;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid;
+
+  }
+
+  /* Style the buttons within the task container */
+  button {
+    height: 40px;
+    width: fit-content;
+    padding: 10px;
+    text-transform: capitalize;
+    font-size: 18px;
+  }
+
+  /* Style the edit button */
+  .edit {
+    background-color: yellow;
+    border-radius: 5px;
+    border: none;
+    width: 60px;
+  }
+  /* Style the delete button */
+  .delete {
+    background-color: red;
+    border-radius: 5px;
+    border: none;
+  }
+}

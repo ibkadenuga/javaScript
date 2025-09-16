@@ -1,0 +1,98 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Calculator container */
+.calculator {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 320px;
+}
+
+/* Header */
+.calculator header h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Display screen */
+.display input {
+  width: 100%;
+  height: 60px;
+  font-size: 1.5rem;
+  text-align: right;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #eaeaea;
+  margin-bottom: 1rem;
+}
+
+/* Button grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+/* Button styles */
+button {
+  padding: 1rem;
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #d1d5db;
+  color: #111827;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #9ca3af;
+}
+
+/* Special buttons */
+.del {
+  background-color: #f87171;
+  color: white;
+}
+
+.del:hover {
+  background-color: #ef4444;
+}
+
+.reset {
+  grid-column: span 2;
+  background-color: #fbbf24;
+  color: white;
+}
+
+.reset:hover {
+  background-color: #f59e0b;
+}
+
+.equal {
+  grid-column: span 2;
+  background-color: #34d399;
+  color: white;
+}
+
+.equal:hover {
+  background-color: #10b981;
+}

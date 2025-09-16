@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header> 
+      <div class="logo">
+        <span id="logo">ROCK</span>
+        <span id="logo">PAPER</span>
+        <span id="logo">SCISSORS</span>
+      </div>
+
+      <div class="score">
+        <h6>SCORE</h6>
+        <div id="score">0</div>
+      </div>
+    </header>
+
+    <div class="container">
+      <img class="bg-tri" src="images/bg-triangle.svg" alt="" />
+      <img class="paper bg" src="images/icon-paper.svg" alt="" />
+      <img class="scissors bg" src="images/icon-scissors.svg" alt="" />
+      <img class="rock bg" src="images/icon-rock.svg" alt="" />
+    </div>
+
+<div id="result">
+    <h1 class="result"></h1>
+
+</div>
+    <div class="rule">
+      <button class="btn">RULES</button>
+    </div>
+    
+     <!-- RULES MODAL -->
+    <div class="rules-modal rules">
+      <div class="r-m">
+        <h2>RULES</h2>
+        <i class="fa-solid fa-xmark close"></i>
+      </div>
+      <img src="images/image-rules.svg" alt="">
+    </div>
+
+    
+  </body>
+  <script src="app.js"></script>
+</html>

@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(226, 43%, 10%);
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  gap: 20px;
+  /* flex-wrap: wrap; */
+  width: 100%;
+  max-width: 900px;
+  height: 80vh;
+}
+
+/* PROFILE CARD */
+.profile-card {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 15px;
+  width: 100%;
+  max-width: 200px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .profile {
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 15px;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+
+    .dp {
+      width: 60px;
+      height: 60px;
+      border: 3px solid white;
+      border-radius: 50%;
+      margin-bottom: 40px;
+    }
+
+    .report-for {
+      p {
+        font-size: 14px;
+        color: hsl(236, 100%, 87%);
+        margin-bottom: 5px;
+      }
+
+      .name {
+        color: white;
+        font-size: 24px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .calendar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+
+    button {
+      background: none;
+      border: none;
+      color: hsl(236, 28%, 68%);
+      font-size: 14px;
+      margin-bottom: 15px;
+      text-align: left;
+      cursor: pointer;
+      transition: .3s ease;
+    }
+    button:hover{
+        color: white;
+        font-weight: 400;
+      }
+  }
+}
+
+/* CONATINER */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 15px;
+    width: 210px;
+    height: 215px;
+    background-image: url("./images/icon-work.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-color: hsl(348, 100%, 68%);
+    .activity {
+      background-color: hsl(235, 46%, 20%);
+      border-radius: 15px;
+      height: 80%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        .title {
+          color: white;
+          font-size: 18px;
+          font-weight: 600;
+        }
+
+        .icon {
+          color: white;
+          width: 20px;
+          height: 5px;
+          cursor: pointer;
+        }
+      }
+
+      .current {
+        color: white;
+        font-size: 52px;
+        font-weight: 300;
+      }
+
+      .previous {
+        color: hsl(236, 100%, 87%);
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 375px) {
+  main {
+    padding: 40px 0;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    max-width: 800px;
+  }
+
+  .container {
+    justify-content: center;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 15px;
+    width: 100%;
+    height: 215px;
+    background-image: url("./images/icon-work.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-color: hsl(348, 100%, 68%);
+}
+}

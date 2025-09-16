@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Browser extensions manager UI</title>
+    <!-- Link to the stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link to font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <!-- Logo -->
+        <div id="logo">
+          <img src="assets/images/icon-sun.svg" alt="" />
+          <h1>Extensions</h1>
+        </div>
+        <button class="theme">
+          <i class="fa-solid fa-sun sun"></i>
+        </button>
+      </header>
+
+      <section id="select">
+        <h2>Extensions List</h2>
+
+        <div class="select">
+          <button class="select-btn all-btn active">All</button>
+          <button class="select-btn active-btn active">Active</button>
+          <button class="select-btn inactive-btn active">Inactive</button>
+        </div>
+      </section>
+
+      <!-- Extension section -->
+      <section class="extension">
+
+      </section>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
