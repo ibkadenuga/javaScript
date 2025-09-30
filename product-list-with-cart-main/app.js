@@ -48,6 +48,44 @@ async function fetchData() {
 //   })
 // }
 
+
+
+
+
+// HERO SLIDER
+const slides = document.querySelectorAll('.swiper-slide');
+let currentIndex0 = 0;
+let autoSlideInterval;
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === index);
+  });
+}
+
+function moveSlider(direction) {
+  currentIndex0 = (currentIndex0 + direction + slides.length) % slides.length;
+  showSlide(currentIndex0);
+  resetAutoSlide();
+}
+
+function autoSlide() {
+  currentIndex0 = (currentIndex0 + 1) % slides.length;
+  showSlide(currentIndex0);
+}
+
+function resetAutoSlide() {
+  clearInterval(autoSlideInterval);
+  autoSlideInterval = setInterval(autoSlide, 3000);
+}
+
+showSlide(currentIndex0);
+autoSlideInterval = setInterval(autoSlide, 5000);
+
+
+
+
+
 // FUNCTION
 function renderData(products) {
   const sliderTrack = document.getElementById('sliderTrack');
@@ -90,43 +128,7 @@ fetchData();
 
 
 
-
-// HERO SLIDER
-const slides = document.querySelectorAll('.swiper-slide');
-let currentIndex0 = 0;
-let autoSlideInterval;
-
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.toggle('active', i === index);
-  });
-}
-
-function moveSlider(direction) {
-  currentIndex0 = (currentIndex0 + direction + slides.length) % slides.length;
-  showSlide(currentIndex0);
-  resetAutoSlide();
-}
-
-function autoSlide() {
-  currentIndex0 = (currentIndex0 + 1) % slides.length;
-  showSlide(currentIndex0);
-}
-
-function resetAutoSlide() {
-  clearInterval(autoSlideInterval);
-  autoSlideInterval = setInterval(autoSlide, 3000);
-}
-
-showSlide(currentIndex0);
-autoSlideInterval = setInterval(autoSlide, 5000);
-
-
-
-
-
-
-// slider
+// slider suub-hero
 const track = document.getElementById('sliderTrack');
     const slideWidth = track.children[0].offsetWidth;
     let currentIndex = 0;

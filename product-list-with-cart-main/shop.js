@@ -1,10 +1,9 @@
 const main = document.querySelector(".container");
 const apiUrl = "https://dummyjson.com/products";
 
-const headerCart = document.querySelector("header .carttt");
+const headerCart = document.querySelector(".cart-btn");
 
 const cartContaier = document.querySelector(".cart-container");
-const cartCount = document.querySelector(".cartCount");
 const cartList =  document.querySelector(".cart-list")
 
 async function fetchData() {
@@ -12,6 +11,15 @@ async function fetchData() {
   const data = await response.json();
   renderData(data.products);
 }
+
+headerCart.addEventListener("click",()=>{
+  if(cartContaier.classList.contains("hidden")){
+   cartContaier.classList.remove("hidden")
+  }
+  else{
+    cartContaier.classList.add("hidden")
+  }
+})
 
 let cart = [];
 
@@ -55,9 +63,21 @@ function renderData(data) {
     const btnSpan = document.createElement('span');
     btnSpan.textContent = 'Add to Cart';
     btnSpan.className = 'btnspan'
+
+    const amount = document.createElement("div")
+    amount.className = 'amount'
+    const plus = document.createElement("button")
+    plus.textContent = "+"
+    const minus = document.createElement('button')
+    minus.textContent = '-'
+    const amountSpan = document.createElement('p')
+    amountSpan.textContent = ''
+    amountSpan.className = 'amountSpan'
+
+    amount.append(minus, amountSpan, plus)
     cartBtn.addEventListener('click',()=>{
+      cartBtn.append(amount)
       cart.push(item);
-      cartCount.textContent = cart.lenght;
       renderCart();
     })
     
@@ -73,12 +93,15 @@ function renderData(data) {
 
 function renderCart(){
   cartList.textContent = "";
+  if (cart.length > 0){
+    cartContaier.classList.remove("hidden")
+  }
   cart.map((item) =>{
     const cartItem = document.createElement('div');
     cartItem.classList = 'cartitem'
 
     const title = document.createElement('h2');
-    text.textContent = item.title;
+    title.textContent = item.title;
     title.className = 'title'
 
 
